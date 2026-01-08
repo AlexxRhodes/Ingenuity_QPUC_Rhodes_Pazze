@@ -24,13 +24,11 @@ Lancer le Whiteboard sur le **PC GameMaster** (le joueur 2 regarde cet écran).
 
 ### 2) Lancer le GameMaster (sur le PC J1)
 
-```bash
-python qpuc_gamemaster_py/main.py --port 4646 --device "NOM_DE_LA_CARTE_RESEAU" --verbose
-```
+Lancer le script correspond au nombre de controller que vous voulez afficher sur le PC GameMaster.
 
 Par défaut, le GameMaster lance automatiquement 2 controllers **sur le même PC** (2 fenêtres). Pour désactiver : `--no-controllers`.
 
-Si tu veux que **J2 n'ait que son Controller** sur son PC, lancer le script `Controller_J2.bat`
+Si tu veux que **J2 n'ait que son Controller** sur son PC, lancer le script `Controller_J2.bat` sur le PC de J2.
 
 ## Câblage Ingescape (important)
 

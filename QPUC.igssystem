@@ -491,6 +491,155 @@
                 "plugin": "ingescape_class",
                 "uuid": "22a21f95-634c-44b9-a72d-166ee4262afd",
                 "version": ""
+            },
+            {
+                "className": "QPUC_GameMaster",
+                "color": 0,
+                "definition": {
+                    "inputs": [
+                        {
+                            "name": "start",
+                            "type": "IMPULSION"
+                        },
+                        {
+                            "name": "reset",
+                            "type": "IMPULSION"
+                        },
+                        {
+                            "name": "click_p1",
+                            "type": "STRING"
+                        },
+                        {
+                            "name": "click_p2",
+                            "type": "STRING"
+                        },
+                        {
+                            "name": "ready_p1",
+                            "type": "BOOL"
+                        },
+                        {
+                            "name": "ready_p2",
+                            "type": "BOOL"
+                        },
+                        {
+                            "name": "reset_p1",
+                            "type": "BOOL"
+                        },
+                        {
+                            "name": "reset_p2",
+                            "type": "BOOL"
+                        },
+                        {
+                            "name": "wb_p1_windowWidth",
+                            "type": "INTEGER"
+                        },
+                        {
+                            "name": "wb_p1_windowHeight",
+                            "type": "INTEGER"
+                        },
+                        {
+                            "name": "wb_p1_whiteboardWidth",
+                            "type": "INTEGER"
+                        },
+                        {
+                            "name": "wb_p1_whiteboardHeight",
+                            "type": "INTEGER"
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "name": "state",
+                            "type": "STRING"
+                        },
+                        {
+                            "name": "turn",
+                            "type": "INTEGER"
+                        },
+                        {
+                            "name": "time_left",
+                            "type": "INTEGER"
+                        },
+                        {
+                            "name": "score_p1",
+                            "type": "INTEGER"
+                        },
+                        {
+                            "name": "score_p2",
+                            "type": "INTEGER"
+                        }
+                    ],
+                    "services": [
+                        {
+                            "arguments": [
+                                {
+                                    "name": "elementId",
+                                    "type": "INTEGER"
+                                }
+                            ],
+                            "name": "elementCreated"
+                        },
+                        {
+                            "arguments": [
+                                {
+                                    "name": "succeeded",
+                                    "type": "BOOL"
+                                }
+                            ],
+                            "name": "actionResult"
+                        },
+                        {
+                            "arguments": [
+                                {
+                                    "name": "width",
+                                    "type": "INTEGER"
+                                },
+                                {
+                                    "name": "height",
+                                    "type": "INTEGER"
+                                }
+                            ],
+                            "name": "getWhiteboardSizeResult"
+                        }
+                    ]
+                },
+                "description": "",
+                "icon": -1,
+                "package": "",
+                "plugin": "ingescape_class",
+                "uuid": "9b70b57f-293c-4977-9fef-a36fbfeff787",
+                "version": ""
+            },
+            {
+                "className": "QPUC_Controller",
+                "color": 0,
+                "definition": {
+                    "inputs": [
+                        {
+                            "name": "gm_state",
+                            "type": "STRING"
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "name": "answer",
+                            "type": "STRING"
+                        },
+                        {
+                            "name": "ready",
+                            "type": "BOOL"
+                        },
+                        {
+                            "name": "reset",
+                            "type": "BOOL"
+                        }
+                    ]
+                },
+                "description": "",
+                "icon": -1,
+                "package": "",
+                "plugin": "ingescape_class",
+                "uuid": "f4aad770-d7a5-4b0e-9680-bbfd9941e085",
+                "version": ""
             }
         ]
     },
@@ -498,208 +647,29 @@
         {
             "children": [
                 {
-                    "data": {
-                        "argumentValues": [
-                            {
-                                "name": "type",
-                                "value": "",
-                                "valueIsImplicit": true
-                            },
-                            {
-                                "name": "x",
-                                "value": null,
-                                "valueIsImplicit": true
-                            },
-                            {
-                                "name": "y",
-                                "value": null,
-                                "valueIsImplicit": true
-                            },
-                            {
-                                "name": "width",
-                                "value": null,
-                                "valueIsImplicit": true
-                            },
-                            {
-                                "name": "height",
-                                "value": null,
-                                "valueIsImplicit": true
-                            },
-                            {
-                                "name": "fill",
-                                "value": "",
-                                "valueIsImplicit": true
-                            },
-                            {
-                                "name": "stroke",
-                                "value": "",
-                                "valueIsImplicit": true
-                            },
-                            {
-                                "name": "strokeWidth",
-                                "value": null,
-                                "valueIsImplicit": true
-                            }
-                        ],
-                        "selectedAgentUuid": "fe25a9ba-5407-4e69-be41-193a8b5a34f5",
-                        "selectedService": "addShape"
-                    },
-                    "height": 259,
-                    "isExpanded": true,
-                    "name": "",
-                    "tool": "com.ingescape.circle.tool.servicecaller",
-                    "uuid": "794402e8-b626-4f1b-bb05-0f35b3f93538",
-                    "width": 350,
-                    "x": 736.8964224070651,
-                    "y": 80.11890462371696
-                },
-                {
-                    "data": {
-                        "argumentValues": [
-                            {
-                                "name": "base64",
-                                "value": null,
-                                "valueIsImplicit": true
-                            },
-                            {
-                                "name": "x",
-                                "value": null,
-                                "valueIsImplicit": true
-                            },
-                            {
-                                "name": "y",
-                                "value": null,
-                                "valueIsImplicit": true
-                            },
-                            {
-                                "name": "width",
-                                "value": null,
-                                "valueIsImplicit": true
-                            },
-                            {
-                                "name": "height",
-                                "value": null,
-                                "valueIsImplicit": true
-                            }
-                        ],
-                        "selectedAgentUuid": "fe25a9ba-5407-4e69-be41-193a8b5a34f5",
-                        "selectedService": "addImage"
-                    },
-                    "height": 187,
-                    "isExpanded": true,
-                    "name": "",
-                    "tool": "com.ingescape.circle.tool.servicecaller",
-                    "uuid": "d636dc3a-484e-4502-9e32-ff127b0f692f",
-                    "width": 350,
-                    "x": 236.40676420667478,
-                    "y": 263.87328774044795
-                },
-                {
-                    "data": {
-                        "value_type": "IMPULSION"
-                    },
-                    "height": 60,
-                    "isExpanded": true,
-                    "name": "",
-                    "tool": "com.ingescape.circle.tool.writer",
-                    "uuid": "ab15f2c0-8835-4e84-b013-858d212576ca",
-                    "width": 250,
-                    "x": 1099,
-                    "y": 385
-                },
-                {
-                    "data": {
-                        "entries": [
-                            "QPUC"
-                        ],
-                        "value_type": "STRING"
-                    },
-                    "height": 88,
-                    "isExpanded": true,
-                    "name": "",
-                    "tool": "com.ingescape.circle.tool.writer",
-                    "uuid": "da2bd710-406a-479d-aba4-1a48219cd79b",
-                    "width": 250,
-                    "x": -110.97187812292668,
-                    "y": 438.24229020993414
-                },
-                {
-                    "data": {
-                        "value_type": "BOOL"
-                    },
-                    "height": 88,
-                    "isExpanded": true,
-                    "name": "",
-                    "tool": "com.ingescape.circle.tool.writer",
-                    "uuid": "bbbd218f-e1af-4e08-a68d-187eb552010e",
-                    "width": 250,
-                    "x": -108.02690102163967,
-                    "y": 550.151420058838
-                },
-                {
-                    "data": {
-                        "value_type": "IMPULSION"
-                    },
-                    "height": 60,
-                    "isExpanded": true,
-                    "name": "",
-                    "tool": "com.ingescape.circle.tool.writer",
-                    "uuid": "8192d07e-f983-4411-b9ed-4372e40f336b",
-                    "width": 250,
-                    "x": -489.4014356382986,
-                    "y": 480.2195726721601
-                },
-                {
-                    "data": {
-                        "entries": [
-                            "Qu'est-ce qui est jaune et qui attend ?"
-                        ],
-                        "value_type": "STRING"
-                    },
-                    "height": 88,
-                    "isExpanded": true,
-                    "name": "",
-                    "tool": "com.ingescape.circle.tool.writer",
-                    "uuid": "5240014f-a12a-4e57-89d0-9f82fa5628a5",
-                    "width": 250,
-                    "x": 1097.495206088417,
-                    "y": 455.45331290431375
-                },
-                {
-                    "data": {
-                        "argumentValues": [
-                            {
-                                "name": "text",
-                                "value": "Qu'est-ce qui est jaune et qui attend ?"
-                            },
-                            {
-                                "name": "x",
-                                "value": "500"
-                            },
-                            {
-                                "name": "y",
-                                "value": "500"
-                            },
-                            {
-                                "name": "color",
-                                "value": "dark"
-                            }
-                        ],
-                        "selectedAgentUuid": "fe25a9ba-5407-4e69-be41-193a8b5a34f5",
-                        "selectedService": "addText"
-                    },
-                    "height": 168,
-                    "isExpanded": true,
-                    "name": "",
-                    "tool": "com.ingescape.circle.tool.servicecaller",
-                    "uuid": "2debf734-8a13-4873-9ebb-e2e3314d0e1b",
-                    "width": 350,
-                    "x": 1457.7948103868293,
-                    "y": 382.7184995498354
-                },
-                {
                     "agent": {
                         "instances": [
+                            {
+                                "commandLine": "C:\\Users\\alexr\\Desktop\\UPSSITECH\\5A\\Ingescape\\Whiteboard-win64\\Whiteboard.exe",
+                                "hostname": "DESKTOP-VU3AHSG",
+                                "ip": "192.168.1.50",
+                                "isAttachedToCircle": false,
+                                "uuid": "3c6a0548-9dae-4c01-b93a-7a3a0e2cf33e"
+                            },
+                            {
+                                "commandLine": "C:\\Users\\alexr\\Desktop\\UPSSITECH\\5A\\Ingescape\\Whiteboard-win64\\Whiteboard.exe --port 4646 --device Wi-Fi",
+                                "hostname": "DESKTOP-VU3AHSG",
+                                "ip": "192.168.1.50",
+                                "isAttachedToCircle": false,
+                                "uuid": "7204eec9-a5f6-4bb8-a182-8584bcaf5a64"
+                            },
+                            {
+                                "commandLine": "C:\\Users\\arhodes\\Downloads\\Whiteboard-win64\\Whiteboard-win64\\Whiteboard.exe",
+                                "hostname": "LFR-5CG2284K1B",
+                                "ip": "192.168.1.3",
+                                "isAttachedToCircle": false,
+                                "uuid": "982af3d0-16c9-4fda-9556-541c15f42cd4"
+                            },
                             {
                                 "commandLine": "\"C:\\Users\\ntech\\Desktop\\Studies\\5A SRI UPSSITECH\\Ingenuity\\Whiteboard-win64\\Whiteboard.exe\"",
                                 "hostname": "MrEli-Laptop",
@@ -715,71 +685,215 @@
                     "simulationTime": 5000,
                     "uuid": "fe25a9ba-5407-4e69-be41-193a8b5a34f5",
                     "width": 356.0000000000001,
-                    "x": 437.14246939296766,
-                    "y": 562.027963487352
+                    "x": -451.7246604909908,
+                    "y": 252.6551059112249,
+                    "z": 1.0300000000000007
+                },
+                {
+                    "agent": {
+                        "instances": [
+                            {
+                                "commandLine": "C:\\Users\\alexr\\AppData\\Local\\Programs\\Python\\Python312\\python.exe .\\qpuc_gamemaster_py\\main.py --port 4646 --device Wi-Fi --verbose",
+                                "hostname": "DESKTOP-VU3AHSG",
+                                "ip": "192.168.1.50",
+                                "isAttachedToCircle": false,
+                                "uuid": "637bc891-aa7a-442d-a203-130c41b999f8"
+                            },
+                            {
+                                "commandLine": "C:\\Users\\alexr\\Desktop\\UPSSITECH\\5A\\Ingescape\\.venv\\Scripts\\python.exe C:/Users/alexr/Desktop/UPSSITECH/5A/Ingescape/qpuc_gamemaster_py/main.py --port 4646 --device Wi-Fi --verbose",
+                                "hostname": "DESKTOP-VU3AHSG",
+                                "ip": "192.168.1.50",
+                                "isAttachedToCircle": false,
+                                "uuid": "530ee7ec-7f16-4fc7-a59a-ba4b64bb8615"
+                            },
+                            {
+                                "commandLine": "C:\\Users\\alexr\\Desktop\\UPSSITECH\\5A\\Ingescape\\.venv\\Scripts\\python.exe C:\\Users\\alexr\\Desktop\\UPSSITECH\\5A\\Ingescape\\qpuc_gamemaster_py\\main.py --port 4646 --device Wi-Fi --verbose",
+                                "hostname": "DESKTOP-VU3AHSG",
+                                "ip": "192.168.1.50",
+                                "isAttachedToCircle": false,
+                                "uuid": "8cb45135-e411-441a-af32-ece36fbde738"
+                            },
+                            {
+                                "commandLine": "C:\\Users\\alexr\\Desktop\\UPSSITECH\\5A\\Ingescape\\.venv\\Scripts\\python.exe C:/Users/alexr/Desktop/UPSSITECH/5A/Ingescape/qpuc_gamemaster_py/main.py --port 4646 --device Wi-Fi --verbose --no-controller",
+                                "hostname": "DESKTOP-VU3AHSG",
+                                "ip": "192.168.1.50",
+                                "isAttachedToCircle": false,
+                                "uuid": "cdd1706d-d27c-49c0-82b1-f6c014e3b9f1"
+                            },
+                            {
+                                "commandLine": "C:\\Users\\alexr\\Desktop\\UPSSITECH\\5A\\Ingescape\\.venv\\Scripts\\python.exe qpuc_gamemaster_py/main.py --port 4646 --device Wi-Fi --verbose --only-controller-j1",
+                                "hostname": "DESKTOP-VU3AHSG",
+                                "ip": "192.168.1.50",
+                                "isAttachedToCircle": false,
+                                "uuid": "f07f749e-e746-4182-b83c-57f1ce2b46de"
+                            }
+                        ]
+                    },
+                    "class": "9b70b57f-293c-4977-9fef-a36fbfeff787",
+                    "height": 430,
+                    "name": "QPUC_GameMaster",
+                    "simulationTime": 5000,
+                    "uuid": "27c68dc9-9809-40ce-a60e-5b6d856f83da",
+                    "width": 250,
+                    "x": 15.787727965618274,
+                    "y": -55.18523008836877,
+                    "z": 1.0400000000000007
+                },
+                {
+                    "agent": {
+                        "instances": [
+                            {
+                                "commandLine": "C:\\Users\\alexr\\Desktop\\UPSSITECH\\5A\\Ingescape\\.venv\\Scripts\\python.exe C:/Users/alexr/Desktop/UPSSITECH/5A/Ingescape/qpuc_controller_py/main.py --player 1 --port 4646 --device Wi-Fi --verbose",
+                                "hostname": "DESKTOP-VU3AHSG",
+                                "ip": "192.168.1.50",
+                                "isAttachedToCircle": false,
+                                "uuid": "74713d7f-4338-4ad9-af40-e299be3b95b5"
+                            },
+                            {
+                                "commandLine": "C:\\Users\\alexr\\Desktop\\UPSSITECH\\5A\\Ingescape\\.venv\\Scripts\\python.exe C:/Users/alexr/Desktop/UPSSITECH/5A/Ingescape/qpuc_controller_py/main.py --port 4646 --device Wi-Fi --verbose",
+                                "hostname": "DESKTOP-VU3AHSG",
+                                "ip": "192.168.1.50",
+                                "isAttachedToCircle": false,
+                                "uuid": "7e9d46cf-bca1-4d7d-a70a-d929016d2ea2"
+                            },
+                            {
+                                "commandLine": "C:\\Users\\alexr\\Desktop\\UPSSITECH\\5A\\Ingescape\\.venv\\Scripts\\python.exe C:\\Users\\alexr\\Desktop\\UPSSITECH\\5A\\Ingescape\\qpuc_controller_py\\main.py --port 4646 --device Wi-Fi --verbose --player 1",
+                                "hostname": "DESKTOP-VU3AHSG",
+                                "ip": "192.168.1.50",
+                                "isAttachedToCircle": false,
+                                "uuid": "c2dcaf66-4cba-4379-ae65-8e95ec486ce7"
+                            },
+                            {
+                                "commandLine": "C:\\Users\\alexr\\Desktop\\UPSSITECH\\5A\\Ingescape\\.venv\\Scripts\\python.exe qpuc_controller_py\\main.py --player 1 --port 4646 --device Wi-Fi --verbose",
+                                "hostname": "DESKTOP-VU3AHSG",
+                                "ip": "192.168.1.50",
+                                "isAttachedToCircle": false,
+                                "uuid": "173f71ac-c760-4ba7-9be9-c71beecaf253"
+                            },
+                            {
+                                "commandLine": "C:\\Users\\arhodes\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\python.exe .\\qpuc_controller_py\\main.py --port 4646 --device Wi-Fi",
+                                "hostname": "LFR-5CG2284K1B",
+                                "ip": "192.168.1.3",
+                                "isAttachedToCircle": false,
+                                "uuid": "b80fc285-ae07-467f-9863-476564037358"
+                            }
+                        ]
+                    },
+                    "class": "f4aad770-d7a5-4b0e-9680-bbfd9941e085",
+                    "height": 144,
+                    "name": "QPUC_Controller_P1",
+                    "simulationTime": 5000,
+                    "uuid": "7ee3a9fd-4cb5-4926-ad79-ca29bc779545",
+                    "width": 250,
+                    "x": -383.34158588344883,
+                    "y": -69.21554970535018,
+                    "z": 1.0200000000000007
+                },
+                {
+                    "agent": {
+                        "instances": [
+                            {
+                                "commandLine": "C:\\Users\\alexr\\Desktop\\UPSSITECH\\5A\\Ingescape\\.venv\\Scripts\\python.exe C:/Users/alexr/Desktop/UPSSITECH/5A/Ingescape/qpuc_controller_py/main.py --player 2 --port 4646 --device Wi-Fi --verbose",
+                                "hostname": "DESKTOP-VU3AHSG",
+                                "ip": "192.168.1.50",
+                                "isAttachedToCircle": false,
+                                "uuid": "beed6dbf-5e34-4119-a901-f21b5fe28766"
+                            },
+                            {
+                                "commandLine": "C:\\Users\\alexr\\Desktop\\UPSSITECH\\5A\\Ingescape\\.venv\\Scripts\\python.exe C:\\Users\\alexr\\Desktop\\UPSSITECH\\5A\\Ingescape\\qpuc_controller_py\\main.py --port 4646 --device Wi-Fi --verbose --player 2",
+                                "hostname": "DESKTOP-VU3AHSG",
+                                "ip": "192.168.1.50",
+                                "isAttachedToCircle": false,
+                                "uuid": "41d2eafb-cd7d-4357-8cbe-fb3df4a31dce"
+                            },
+                            {
+                                "commandLine": "C:\\Users\\alexr\\AppData\\Local\\Programs\\Python\\Python312\\python.exe qpuc_controller_py\\main.py --player 2 --port 4646 --device Wi-Fi --verbose",
+                                "hostname": "DESKTOP-VU3AHSG",
+                                "ip": "192.168.1.50",
+                                "isAttachedToCircle": false,
+                                "uuid": "c2bf026a-8d49-499b-bba0-e62af42c2728"
+                            },
+                            {
+                                "commandLine": "C:\\Users\\arhodes\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\python.exe .\\qpuc_controller_py\\main.py --player 2 --port 4646 --device Wi-Fi",
+                                "hostname": "LFR-5CG2284K1B",
+                                "ip": "192.168.1.3",
+                                "isAttachedToCircle": false,
+                                "uuid": "e4e1828e-9215-4a95-b00b-7532f0b5d457"
+                            }
+                        ]
+                    },
+                    "class": "f4aad770-d7a5-4b0e-9680-bbfd9941e085",
+                    "height": 144,
+                    "name": "QPUC_Controller_P2",
+                    "simulationTime": 5000,
+                    "uuid": "bd06225b-5dba-4fea-870a-cb04bb087bbf",
+                    "width": 250,
+                    "x": -383.66465749488094,
+                    "y": 87.91785721332127,
+                    "z": 0.9900000000000007
                 }
             ],
             "links": {
-                "others": [
+                "mappings": [
                     {
-                        "destination": "2debf734-8a13-4873-9ebb-e2e3314d0e1b",
-                        "destinationIO": {
-                            "name": "trigger",
-                            "type": "INPUT"
-                        },
-                        "source": "ab15f2c0-8835-4e84-b013-858d212576ca",
-                        "sourceIO": {
-                            "name": "value",
-                            "type": "OUTPUT"
-                        }
+                        "from": "QPUC_GameMaster",
+                        "fromInput": "click_p1",
+                        "to": "QPUC_Controller_P1",
+                        "toOutput": "answer"
                     },
                     {
-                        "destination": "2debf734-8a13-4873-9ebb-e2e3314d0e1b",
-                        "destinationIO": {
-                            "name": "_text",
-                            "type": "INPUT"
-                        },
-                        "source": "5240014f-a12a-4e57-89d0-9f82fa5628a5",
-                        "sourceIO": {
-                            "name": "value",
-                            "type": "OUTPUT"
-                        }
+                        "from": "QPUC_GameMaster",
+                        "fromInput": "click_p2",
+                        "to": "QPUC_Controller_P2",
+                        "toOutput": "answer"
                     },
                     {
-                        "destination": "fe25a9ba-5407-4e69-be41-193a8b5a34f5",
-                        "destinationIO": {
-                            "name": "title",
-                            "type": "INPUT"
-                        },
-                        "source": "da2bd710-406a-479d-aba4-1a48219cd79b",
-                        "sourceIO": {
-                            "name": "value",
-                            "type": "OUTPUT"
-                        }
+                        "from": "QPUC_GameMaster",
+                        "fromInput": "reset_p2",
+                        "to": "QPUC_Controller_P2",
+                        "toOutput": "reset"
                     },
                     {
-                        "destination": "fe25a9ba-5407-4e69-be41-193a8b5a34f5",
-                        "destinationIO": {
-                            "name": "labelsVisible",
-                            "type": "INPUT"
-                        },
-                        "source": "bbbd218f-e1af-4e08-a68d-187eb552010e",
-                        "sourceIO": {
-                            "name": "value",
-                            "type": "OUTPUT"
-                        }
+                        "from": "QPUC_GameMaster",
+                        "fromInput": "reset_p1",
+                        "to": "QPUC_Controller_P1",
+                        "toOutput": "reset"
                     },
                     {
-                        "destination": "bbbd218f-e1af-4e08-a68d-187eb552010e",
-                        "destinationIO": {
-                            "name": "trigger",
-                            "type": "INPUT"
-                        },
-                        "source": "8192d07e-f983-4411-b9ed-4372e40f336b",
-                        "sourceIO": {
-                            "name": "value",
-                            "type": "OUTPUT"
-                        }
+                        "from": "QPUC_GameMaster",
+                        "fromInput": "ready_p1",
+                        "to": "QPUC_Controller_P1",
+                        "toOutput": "ready"
+                    },
+                    {
+                        "from": "QPUC_GameMaster",
+                        "fromInput": "ready_p2",
+                        "to": "QPUC_Controller_P2",
+                        "toOutput": "ready"
+                    },
+                    {
+                        "from": "QPUC_GameMaster",
+                        "fromInput": "wb_p1_windowWidth",
+                        "to": "Whiteboard",
+                        "toOutput": "windowWidth"
+                    },
+                    {
+                        "from": "QPUC_GameMaster",
+                        "fromInput": "wb_p1_windowHeight",
+                        "to": "Whiteboard",
+                        "toOutput": "windowHeight"
+                    },
+                    {
+                        "from": "QPUC_GameMaster",
+                        "fromInput": "wb_p1_whiteboardWidth",
+                        "to": "Whiteboard",
+                        "toOutput": "whiteboardWidth"
+                    },
+                    {
+                        "from": "QPUC_GameMaster",
+                        "fromInput": "wb_p1_whiteboardHeight",
+                        "to": "Whiteboard",
+                        "toOutput": "whiteboardHeight"
                     }
                 ]
             },
